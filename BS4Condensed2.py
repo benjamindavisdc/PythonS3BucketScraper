@@ -28,8 +28,7 @@ def scrape(url):
         (r"(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s*\n*\s*(\d{1,2}:\d{2}\s*[A|P]M\s*-\s*\d{1,2}:\d{2}\s*[A|P]M)",
          '{}: {}\n\t'),
         (r"(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(\d{1,2}:\d{2}\s*[AP]M)\s*-\s*(\d{1,2}:\d{2}\s*[AP]M)",
-         '{}: {} - {}')
-    ]
+         '{}: {} - {}')]
 
     for pattern, output_format in patterns:
         scrape_hours(text, pattern, output_format)
